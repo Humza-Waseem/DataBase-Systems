@@ -83,10 +83,11 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(455, 66);
+            dateTimePicker1.Location = new Point(455, 72);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(300, 37);
             dateTimePicker1.TabIndex = 12;
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // button3
             // 
@@ -102,6 +103,7 @@
             // 
             AutoScaleDimensions = new SizeF(12F, 29F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkCyan;
             ClientSize = new Size(1248, 628);
             Controls.Add(button3);
             Controls.Add(dateTimePicker1);

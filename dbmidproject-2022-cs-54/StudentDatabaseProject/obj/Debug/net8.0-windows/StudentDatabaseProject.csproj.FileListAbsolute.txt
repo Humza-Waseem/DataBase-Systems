@@ -91,3 +91,4 @@ H:\4thSemester\DB_midProject\dbmidproject-2022-cs-54\StudentDatabaseProject\obj\
 H:\4thSemester\DB_midProject\dbmidproject-2022-cs-54\StudentDatabaseProject\obj\Debug\net8.0-windows\StudentDatabaseProject.pdb
 H:\4thSemester\DB_midProject\dbmidproject-2022-cs-54\StudentDatabaseProject\obj\Debug\net8.0-windows\StudentDatabaseProject.genruntimeconfig.cache
 H:\4thSemester\DB_midProject\dbmidproject-2022-cs-54\StudentDatabaseProject\obj\Debug\net8.0-windows\ref\StudentDatabaseProject.dll
+H:\4thSemester\DB_midProject\dbmidproject-2022-cs-54\StudentDatabaseProject\obj\Debug\net8.0-windows\StudentDatabaseProject.sourcelink.json

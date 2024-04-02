@@ -65,20 +65,11 @@ namespace StudentDatabaseProject
         private void button1_Click(object sender, EventArgs e)
         {
             AttendenceViewer newUserControl = new AttendenceViewer();
-            MessageBox.Show("Select the date and click on result to generate Report");
             newUserControl.Dock = DockStyle.Fill;
-
             AttendenceViewer att = new AttendenceViewer();
-
-            // Show the second form
-            //cloform.Show();
             att.ShowDialog();
-
-            // If you want to hide the current form when opening the second form
             this.Show();
-
-            // Remove or comment out this line to keep the current form open
-            // this.Close();
+            //
         }
 
 
@@ -121,14 +112,13 @@ namespace StudentDatabaseProject
                 MessageBox.Show(id.ToString());
                 if (dataGridView1.Rows.Count != 0)
                 {
-                    connection.Open();
-
-
 
                     for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
                     {
                         if (dataGridView1.Rows[i].Cells[0].Value != null)
+
                         {
+                            connection.Open();
                             string SI = dataGridView1.Rows[i].Cells[1].Value.ToString();
                             string S = dataGridView1.Rows[i].Cells[0].Value.ToString();
                             int x = 1;
@@ -145,7 +135,7 @@ namespace StudentDatabaseProject
                             MessageBox.Show("Saved Successfully");
                             connection.Close();
                         }
-                        else { MessageBox.Show("Mark the attendance first it!!!"); }
+                        else { MessageBox.Show("First Mark attendance!!!"); }
                     }
 
 
@@ -157,6 +147,11 @@ namespace StudentDatabaseProject
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }

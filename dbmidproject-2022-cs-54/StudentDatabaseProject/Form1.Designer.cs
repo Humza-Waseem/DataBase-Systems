@@ -31,7 +31,6 @@
             Button DeleteButton;
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            ManageStudentButton = new Button();
             pictureBox1 = new PictureBox();
             ManageRubricButton = new Button();
             ManageCLOButton = new Button();
@@ -76,32 +75,19 @@
             DeleteButton.ForeColor = Color.White;
             DeleteButton.Location = new Point(772, 290);
             DeleteButton.Name = "DeleteButton";
-            DeleteButton.Size = new Size(142, 32);
+            DeleteButton.Size = new Size(142, 37);
             DeleteButton.TabIndex = 17;
             DeleteButton.Text = "Delete";
             DeleteButton.UseVisualStyleBackColor = false;
             DeleteButton.Click += DeleteButton_Click;
             // 
-            // ManageStudentButton
-            // 
-            ManageStudentButton.BackColor = Color.OrangeRed;
-            ManageStudentButton.BackgroundImageLayout = ImageLayout.Stretch;
-            ManageStudentButton.Font = new Font("Arial Rounded MT Bold", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ManageStudentButton.ForeColor = Color.White;
-            ManageStudentButton.Location = new Point(37, 213);
-            ManageStudentButton.Name = "ManageStudentButton";
-            ManageStudentButton.Size = new Size(207, 37);
-            ManageStudentButton.TabIndex = 0;
-            ManageStudentButton.Text = "Manage Students";
-            ManageStudentButton.UseVisualStyleBackColor = false;
-            // 
             // pictureBox1
             // 
             pictureBox1.BackgroundImage = Properties.Resources.image_removebg_preview;
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Location = new Point(37, 12);
+            pictureBox1.Location = new Point(3, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(207, 132);
+            pictureBox1.Size = new Size(294, 204);
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
@@ -112,12 +98,13 @@
             ManageRubricButton.BackgroundImageLayout = ImageLayout.Stretch;
             ManageRubricButton.Font = new Font("Arial Rounded MT Bold", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ManageRubricButton.ForeColor = Color.White;
-            ManageRubricButton.Location = new Point(37, 363);
+            ManageRubricButton.Location = new Point(3, 363);
             ManageRubricButton.Name = "ManageRubricButton";
-            ManageRubricButton.Size = new Size(207, 37);
+            ManageRubricButton.Size = new Size(298, 37);
             ManageRubricButton.TabIndex = 2;
             ManageRubricButton.Text = " Manage Rubrics";
             ManageRubricButton.UseVisualStyleBackColor = false;
+            ManageRubricButton.Click += ManageRubricButton_Click;
             // 
             // ManageCLOButton
             // 
@@ -125,9 +112,9 @@
             ManageCLOButton.BackgroundImageLayout = ImageLayout.Stretch;
             ManageCLOButton.Font = new Font("Arial Rounded MT Bold", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ManageCLOButton.ForeColor = Color.White;
-            ManageCLOButton.Location = new Point(37, 290);
+            ManageCLOButton.Location = new Point(3, 290);
             ManageCLOButton.Name = "ManageCLOButton";
-            ManageCLOButton.Size = new Size(207, 37);
+            ManageCLOButton.Size = new Size(298, 37);
             ManageCLOButton.TabIndex = 3;
             ManageCLOButton.Text = " Manage CLOs ";
             ManageCLOButton.UseVisualStyleBackColor = false;
@@ -139,12 +126,13 @@
             AssessmentButton.BackgroundImageLayout = ImageLayout.Stretch;
             AssessmentButton.Font = new Font("Arial Rounded MT Bold", 12F);
             AssessmentButton.ForeColor = Color.White;
-            AssessmentButton.Location = new Point(37, 436);
+            AssessmentButton.Location = new Point(3, 436);
             AssessmentButton.Name = "AssessmentButton";
-            AssessmentButton.Size = new Size(207, 37);
+            AssessmentButton.Size = new Size(301, 37);
             AssessmentButton.TabIndex = 4;
             AssessmentButton.Text = "Assessments";
             AssessmentButton.UseVisualStyleBackColor = false;
+            AssessmentButton.Click += AssessmentButton_Click;
             // 
             // RubricButton
             // 
@@ -152,9 +140,9 @@
             RubricButton.BackgroundImageLayout = ImageLayout.Stretch;
             RubricButton.Font = new Font("Arial Rounded MT Bold", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             RubricButton.ForeColor = Color.White;
-            RubricButton.Location = new Point(37, 515);
+            RubricButton.Location = new Point(3, 515);
             RubricButton.Name = "RubricButton";
-            RubricButton.Size = new Size(207, 37);
+            RubricButton.Size = new Size(301, 37);
             RubricButton.TabIndex = 5;
             RubricButton.Text = " Rubric Levels ";
             RubricButton.UseVisualStyleBackColor = false;
@@ -165,9 +153,9 @@
             MarkEvaluationButton.BackgroundImageLayout = ImageLayout.Stretch;
             MarkEvaluationButton.Font = new Font("Arial Rounded MT Bold", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MarkEvaluationButton.ForeColor = Color.White;
-            MarkEvaluationButton.Location = new Point(37, 592);
+            MarkEvaluationButton.Location = new Point(3, 592);
             MarkEvaluationButton.Name = "MarkEvaluationButton";
-            MarkEvaluationButton.Size = new Size(207, 37);
+            MarkEvaluationButton.Size = new Size(301, 37);
             MarkEvaluationButton.TabIndex = 6;
             MarkEvaluationButton.Text = "Mark Evaluation";
             MarkEvaluationButton.UseVisualStyleBackColor = false;
@@ -182,7 +170,6 @@
             panel1.Controls.Add(ManageCLOButton);
             panel1.Controls.Add(ManageRubricButton);
             panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(ManageStudentButton);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -195,9 +182,9 @@
             button1.BackgroundImageLayout = ImageLayout.Stretch;
             button1.Font = new Font("Arial Rounded MT Bold", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(37, 657);
+            button1.Location = new Point(3, 657);
             button1.Name = "button1";
-            button1.Size = new Size(207, 37);
+            button1.Size = new Size(298, 37);
             button1.TabIndex = 7;
             button1.Text = "Attendance";
             button1.UseVisualStyleBackColor = false;
@@ -269,7 +256,7 @@
             button9.BackColor = Color.LimeGreen;
             button9.Font = new Font("Arial Rounded MT Bold", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button9.ForeColor = Color.White;
-            button9.Location = new Point(303, 48);
+            button9.Location = new Point(303, 58);
             button9.Name = "button9";
             button9.Size = new Size(64, 34);
             button9.TabIndex = 18;
@@ -284,7 +271,7 @@
             ADD_Button.ForeColor = Color.White;
             ADD_Button.Location = new Point(373, 290);
             ADD_Button.Name = "ADD_Button";
-            ADD_Button.Size = new Size(136, 32);
+            ADD_Button.Size = new Size(136, 37);
             ADD_Button.TabIndex = 3;
             ADD_Button.Text = "ADD";
             ADD_Button.UseVisualStyleBackColor = false;
@@ -383,7 +370,7 @@
             button7.ForeColor = Color.White;
             button7.Location = new Point(578, 290);
             button7.Name = "button7";
-            button7.Size = new Size(139, 32);
+            button7.Size = new Size(139, 37);
             button7.TabIndex = 16;
             button7.Text = "Edit";
             button7.UseVisualStyleBackColor = false;
@@ -461,7 +448,6 @@
 
         #endregion
         private Button button8;
-        private Button ManageStudentButton;
         private PictureBox pictureBox1;
         private Button ManageRubricButton;
         private Button ManageCLOButton;

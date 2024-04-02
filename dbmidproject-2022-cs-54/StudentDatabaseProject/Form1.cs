@@ -121,20 +121,18 @@ namespace StudentDatabaseProject
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            // Ensure the clicked cell is not a header and that there is at least one row
+
             if (e.RowIndex >= 0 && dataGridView1.Rows.Count > 0)
             {
                 DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
 
-                // Assuming your DataGridView columns correspond to the columns in the Student table
+
                 FirstNameTextBox.Text = selectedRow.Cells["FirstName"].Value.ToString();
                 LastNameTB.Text = selectedRow.Cells["LastName"].Value.ToString();
                 ContactTB.Text = selectedRow.Cells["Contact"].Value.ToString();
                 EmailTB.Text = selectedRow.Cells["Email"].Value.ToString();
                 RegNoTB.Text = selectedRow.Cells["RegistrationNumber"].Value.ToString();
 
-
-                // You can add more textbox assignments as needed
             }
 
         }
@@ -190,12 +188,12 @@ namespace StudentDatabaseProject
             bool flag = ValidateEmail(EmailTB.Text);
             bool check = ValidateRegistrationNumber(RegNoTB.Text);
 
-            if(check == false)
+            if (check == false)
             {
                 MessageBox.Show("Registration Number not in Correct Format", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            if (!flag  & !check)
+            if (!flag & !check)
             {
                 return false;
             }
@@ -509,6 +507,23 @@ namespace StudentDatabaseProject
 
             // If you want to hide the current form when opening the second form
             this.Show();
+        }
+
+        private void AssessmentButton_Click(object sender, EventArgs e)
+        {
+            Assessment ass = new Assessment();
+
+            // Show the second form
+            //cloform.Show();
+            ass.ShowDialog();
+
+            // If you want to hide the current form when opening the second form
+            this.Show();
+        }
+
+        private void ManageRubricButton_Click(object sender, EventArgs e)
+        {
+//base 
         }
     }
 }

@@ -49,7 +49,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(854, 125);
+            label1.Location = new Point(882, 120);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(124, 29);
@@ -59,6 +59,7 @@
             // GenerateReportBTN
             // 
             GenerateReportBTN.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            GenerateReportBTN.ForeColor = SystemColors.ActiveCaptionText;
             GenerateReportBTN.Location = new Point(1013, 212);
             GenerateReportBTN.Name = "GenerateReportBTN";
             GenerateReportBTN.Size = new Size(195, 34);
@@ -69,6 +70,8 @@
             // 
             // comboBox1
             // 
+            comboBox1.BackColor = SystemColors.Info;
+            comboBox1.ForeColor = SystemColors.ActiveCaptionText;
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(1013, 117);
             comboBox1.Name = "comboBox1";
@@ -77,6 +80,7 @@
             // 
             // button1
             // 
+            button1.ForeColor = SystemColors.ActiveCaptionText;
             button1.Location = new Point(1013, 160);
             button1.Name = "button1";
             button1.Size = new Size(195, 34);
@@ -89,6 +93,7 @@
             // 
             AutoScaleDimensions = new SizeF(12F, 29F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkSlateGray;
             ClientSize = new Size(1435, 662);
             Controls.Add(button1);
             Controls.Add(comboBox1);
@@ -96,6 +101,7 @@
             Controls.Add(label1);
             Controls.Add(dataGridView1);
             Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ForeColor = SystemColors.ButtonFace;
             Margin = new Padding(4, 3, 4, 3);
             Name = "AttendenceViewer";
             Text = "AttendenceViewer";
